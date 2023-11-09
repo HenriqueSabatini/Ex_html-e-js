@@ -5,22 +5,23 @@ const form = document.getElementById('form-numeros');
     }
 
     form.addEventListener('submit', function (e) {
-        let formValido
-        e.preventDefault();
+        e.preventDefault();    
 
-    const nA = document.getElementById('numeroA').value;
-    const nB = document.getElementById('numeroB').value;
+    const nA = parseInt(document.getElementById('numeroA').value); 
+    const nB = parseInt(document.getElementById('numeroB').value); 
     const mensagemSucesso = `Parabens numero valido!!! \n O valor B: ${nB} é maior que o valor A: ${nA}`;
 
     formValido = validaNumero(nA, nB)
     if (formValido){
         alert(mensagemSucesso);
 
-        nA.value = '';
-        nB.value = '';
+    document.getElementById('numeroA').value;
+    document.getElementById('numeroB').value;
     }else if (nB <= nA) {
         alert("Não valido! A maior ou igual a B!");
     } 
+    document.getElementById('numeroA').value = '';
+    document.getElementById('numeroB').value = '';
 
 }) 
 
